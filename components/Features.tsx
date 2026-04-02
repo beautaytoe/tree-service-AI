@@ -56,6 +56,10 @@ export default function Features() {
           <h2 className="mt-2 text-[2rem] font-extrabold tracking-tight text-charcoal-900 sm:text-4xl">
             Tools That Work as Hard as You Do
           </h2>
+          <p className="mt-4 text-lg text-charcoal-600">
+            Purpose-built AI tools for tree service contractors. No apps to
+            learn. No staff to hire.
+          </p>
         </motion.div>
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">

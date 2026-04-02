@@ -22,7 +22,12 @@ export default function LeadCapture() {
 
           <form
             className="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row"
-            onSubmit={(e) => e.preventDefault()}
+            onSubmit={(e) => {
+              e.preventDefault();
+              const form = e.currentTarget;
+              alert("Thanks! We'll text you the demo link shortly.");
+              form.reset();
+            }}
           >
             <div className="relative flex-1">
               <Phone className="absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-charcoal-400" />

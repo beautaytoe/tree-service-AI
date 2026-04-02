@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import Image from "next/image";
 import HeroCanvas from "./HeroCanvas";
 
 const bullets = [
@@ -88,7 +89,25 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Interactive canvas */}
+          {/* Mobile visual */}
+          <motion.div
+            className="flex justify-center lg:hidden"
+            initial={{ opacity: 0, scale: 0.95 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.5, delay: 0.5 }}
+          >
+            <div className="overflow-hidden rounded-2xl bg-charcoal-900 p-6">
+              <Image
+                src="/logo-full.png"
+                alt="Tree Service AI"
+                width={200}
+                height={200}
+                className="h-auto w-[200px]"
+              />
+            </div>
+          </motion.div>
+
+          {/* Interactive canvas — desktop */}
           <motion.div
             className="hidden lg:block"
             initial={{ opacity: 0 }}

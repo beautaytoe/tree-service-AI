@@ -62,7 +62,12 @@ export default function Contact() {
 
               <form
                 className="mt-6 space-y-4"
-                onSubmit={(e) => e.preventDefault()}
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  const form = e.currentTarget;
+                  alert("Thanks! We'll be in touch shortly.");
+                  form.reset();
+                }}
               >
                 <div>
                   <label
