@@ -58,8 +58,8 @@ export default function Demo() {
 
               {/* Play button */}
               <div className="absolute inset-0 flex flex-col items-center justify-center">
-                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-accent shadow-lg shadow-amber-500/30 transition-transform group-hover:scale-110 sm:h-24 sm:w-24">
-                  <Play className="ml-1 h-8 w-8 text-charcoal-900 sm:h-10 sm:w-10" />
+                <div className="flex h-20 w-20 items-center justify-center rounded-full bg-green-500 shadow-lg shadow-green-500/30 transition-transform group-hover:scale-110 sm:h-24 sm:w-24">
+                  <Play className="ml-1 h-8 w-8 text-white sm:h-10 sm:w-10" />
                 </div>
                 <p className="mt-5 text-lg font-bold text-white">
                   Watch the 90-Second Demo

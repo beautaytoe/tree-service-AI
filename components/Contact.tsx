@@ -135,7 +135,7 @@ export default function Contact() {
                 </div>
                 <button
                   type="submit"
-                  className="flex h-14 w-full items-center justify-center gap-2 rounded-lg bg-accent text-base font-bold text-charcoal-900 shadow-lg shadow-amber-500/25 transition-all hover:bg-accent-dark"
+                  className="flex h-14 w-full items-center justify-center gap-2 rounded-lg bg-green-500 text-base font-bold text-white shadow-lg shadow-green-500/25 transition-all hover:bg-green-400"
                 >
                   <Send className="h-4 w-4" />
                   Book My Demo

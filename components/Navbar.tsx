@@ -35,7 +35,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="rounded-lg bg-accent px-5 py-2.5 text-sm font-bold text-charcoal-900 shadow-sm transition-colors hover:bg-accent-dark"
+            className="rounded-lg bg-green-600 px-5 py-2.5 text-sm font-bold text-white shadow-lg shadow-green-600/25 transition-colors hover:bg-green-700"
           >
             Book a Demo
           </a>
@@ -70,7 +70,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-2 block rounded-lg bg-accent px-3 py-3.5 text-center text-base font-bold text-charcoal-900 hover:bg-accent-dark"
+            className="mt-2 block rounded-lg bg-green-600 px-3 py-3.5 text-center text-base font-bold text-white shadow-lg shadow-green-600/25 hover:bg-green-700"
           >
             Book a Demo
           </a>

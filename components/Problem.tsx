@@ -75,7 +75,7 @@ export default function Problem() {
           </p>
           <a
             href="#demo"
-            className="mt-8 inline-flex h-14 items-center justify-center rounded-lg bg-accent px-8 text-base font-bold text-charcoal-900 shadow-lg shadow-amber-500/25 transition-all hover:bg-accent-dark"
+            className="mt-8 inline-flex h-14 items-center justify-center rounded-lg bg-green-500 px-8 text-base font-bold text-white shadow-lg shadow-green-500/25 transition-all hover:bg-green-400"
           >
             See How It Works
           </a>

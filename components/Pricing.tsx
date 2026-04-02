@@ -140,7 +140,7 @@ export default function Pricing() {
                 className={clsx(
                   "flex h-14 items-center justify-center rounded-lg text-base font-bold transition-colors",
                   tier.popular
-                    ? "bg-accent text-charcoal-900 shadow-lg shadow-amber-500/20 hover:bg-accent-dark"
+                    ? "bg-green-600 text-white shadow-lg shadow-green-600/25 ring-2 ring-green-500/20 hover:bg-green-700"
                     : "bg-charcoal-900 text-white hover:bg-charcoal-800"
                 )}
               >

@@ -34,12 +34,12 @@ export default function LeadCapture() {
                 name="phone"
                 required
                 placeholder="(555) 123-4567"
-                className="h-14 w-full rounded-lg border-2 border-green-600 bg-white pl-12 pr-4 text-base text-charcoal-900 placeholder-charcoal-400 focus:border-amber-400 focus:outline-none focus:ring-2 focus:ring-amber-400"
+                className="h-14 w-full rounded-lg border-2 border-green-600 bg-white pl-12 pr-4 text-base text-charcoal-900 placeholder-charcoal-400 focus:border-green-400 focus:outline-none focus:ring-2 focus:ring-green-400"
               />
             </div>
             <button
               type="submit"
-              className="h-14 shrink-0 rounded-lg bg-accent px-8 text-base font-bold text-charcoal-900 shadow-lg shadow-amber-500/25 transition-all hover:bg-accent-dark sm:w-auto"
+              className="h-14 shrink-0 rounded-lg bg-green-500 px-8 text-base font-bold text-white shadow-lg shadow-green-500/25 transition-all hover:bg-green-400 sm:w-auto"
             >
               Send Me the Demo
             </button>

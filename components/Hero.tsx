@@ -75,13 +75,13 @@ export default function Hero() {
             >
               <a
                 href="#demo"
-                className="flex h-14 items-center justify-center rounded-lg bg-accent px-8 text-base font-bold text-charcoal-900 shadow-lg shadow-amber-500/25 transition-all hover:bg-accent-dark hover:shadow-xl hover:shadow-amber-500/30 sm:w-auto"
+                className="flex h-14 items-center justify-center rounded-lg bg-green-600 px-8 text-base font-bold text-white shadow-lg shadow-green-600/25 transition-all hover:bg-green-700 hover:shadow-xl hover:shadow-green-600/30 sm:w-auto"
               >
                 Watch the 90-Second Demo
               </a>
               <a
                 href="#contact"
-                className="flex h-14 items-center justify-center rounded-lg border-2 border-charcoal-300 bg-white px-8 text-base font-bold text-charcoal-700 transition-colors hover:border-charcoal-400 hover:bg-charcoal-50 sm:w-auto"
+                className="flex h-14 items-center justify-center rounded-lg border-2 border-green-600 bg-white px-8 text-base font-bold text-green-700 transition-colors hover:bg-green-50 sm:w-auto"
               >
                 Book a Live Demo
               </a>
