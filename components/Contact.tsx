@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Send, Calendar } from "lucide-react";
+import { Send } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -38,17 +38,12 @@ export default function Contact() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="flex h-full min-h-[400px] flex-col items-center justify-center rounded-2xl border border-charcoal-700 bg-gradient-to-br from-charcoal-800 to-charcoal-900">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-900/50">
-                <Calendar className="h-8 w-8 text-green-400" />
-              </div>
-              <p className="mt-4 text-lg font-bold text-charcoal-200">
-                Calendly booking widget
-              </p>
-              <p className="mt-1 text-sm text-charcoal-500">
-                Embed coming soon
-              </p>
-            </div>
+            <iframe
+              src="https://calendly.com/beau-rizedigital/30min?hide_gdpr_banner=1&background_color=1e293b&text_color=e2e8f0&primary_color=22c55e"
+              className="h-[600px] w-full rounded-2xl"
+              frameBorder="0"
+              title="Book a Demo"
+            />
           </motion.div>
 
           {/* Fallback form */}
