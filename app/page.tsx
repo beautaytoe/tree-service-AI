@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import TrustBar from "@/components/TrustBar";
 import Problem from "@/components/Problem";
 import Demo from "@/components/Demo";
 import HowItWorks from "@/components/HowItWorks";
@@ -19,6 +20,7 @@ export default function Home() {
       <Navbar />
       <MobileCTA />
       <Hero />
+      <TrustBar />
       <Problem />
       <Demo />
       <HowItWorks />
@@ -26,6 +28,7 @@ export default function Home() {
       <LeadCapture />
       <Features />
       <Pricing />
+      <LeadCapture />
       <Testimonials />
       <FAQ />
       <Contact />

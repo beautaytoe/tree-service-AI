@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Check } from "lucide-react";
+import { Check, ShieldCheck } from "lucide-react";
 import clsx from "clsx";
 
 const tiers = [
@@ -149,6 +149,17 @@ export default function Pricing() {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className="mt-10 flex items-center justify-center gap-2 text-center text-sm text-charcoal-500"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true, margin: "-50px" }}
+          transition={{ duration: 0.4, delay: 0.3 }}
+        >
+          <ShieldCheck className="h-5 w-5 shrink-0 text-green-500" />
+          30-Day Money-Back Guarantee &bull; No Long-Term Contracts &bull; Cancel Anytime
+        </motion.div>
       </div>
     </section>
   );
