@@ -5,7 +5,10 @@ import { Send, Calendar } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="bg-section-dark py-20 sm:py-28">
+    <section id="contact" className="relative bg-section-dark py-20 sm:py-28">
+      {/* Top gradient transition */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white to-transparent" style={{ top: "-1px" }} />
+
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center"
@@ -35,9 +38,11 @@ export default function Contact() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <div className="flex h-full min-h-[400px] flex-col items-center justify-center rounded-2xl border-2 border-dashed border-charcoal-600 bg-charcoal-800/60">
-              <Calendar className="h-16 w-16 text-charcoal-500" />
-              <p className="mt-4 text-lg font-semibold text-charcoal-300">
+            <div className="flex h-full min-h-[400px] flex-col items-center justify-center rounded-2xl border border-charcoal-700 bg-gradient-to-br from-charcoal-800 to-charcoal-900">
+              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-green-900/50">
+                <Calendar className="h-8 w-8 text-green-400" />
+              </div>
+              <p className="mt-4 text-lg font-bold text-charcoal-200">
                 Calendly booking widget
               </p>
               <p className="mt-1 text-sm text-charcoal-500">
@@ -57,7 +62,7 @@ export default function Contact() {
               <h3 className="text-lg font-bold text-white">
                 Or drop your info &mdash; we&apos;ll reach out
               </h3>
-              <p className="mt-1 text-sm text-charcoal-400">
+              <p className="mt-1 text-base text-charcoal-400">
                 We&apos;ll get back to you within a few hours.
               </p>
 

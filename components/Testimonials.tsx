@@ -67,11 +67,11 @@ export default function Testimonials() {
                   />
                 ))}
               </div>
-              <blockquote className="flex-1 text-base leading-7 text-charcoal-700">
+              <blockquote className="flex-1 text-lg leading-7 text-charcoal-700">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
               <div className="mt-6 border-t border-charcoal-200 pt-4">
-                <p className="font-semibold text-charcoal-900">
+                <p className="text-base font-semibold text-charcoal-900">
                   {t.name}
                 </p>
                 <p className="text-sm text-charcoal-500">

@@ -9,12 +9,12 @@ const faqs = [
   {
     question: "How quickly can I get set up?",
     answer:
-      "Most clients are fully live within 24 hours. We handle the setup — porting your number, configuring your AI responses, and connecting your calendar. You just review and approve.",
+      "Most clients are fully live within 24 hours. We handle the setup \u2014 porting your number, configuring your AI responses, and connecting your calendar. You just review and approve.",
   },
   {
     question: "Will the AI sound robotic to my customers?",
     answer:
-      "Not at all. Our Voice AI is powered by RetellAI and sounds remarkably natural. It's trained on tree service terminology and handles conversations like an experienced receptionist — including follow-up questions and objection handling.",
+      "Not at all. Our Voice AI is powered by RetellAI and sounds remarkably natural. It\u2019s trained on tree service terminology and handles conversations like an experienced receptionist \u2014 including follow-up questions and objection handling.",
   },
   {
     question: "What if a lead needs to talk to a real person?",
@@ -29,7 +29,7 @@ const faqs = [
   {
     question: "How does Tree Service AI integrate with my existing tools?",
     answer:
-      "We integrate with Google Calendar, Outlook, and most popular CRMs. Beaver Bot proposals can be sent directly via SMS or email. If you use a specific tool, ask us — we likely support it or can build a custom integration.",
+      "We integrate with Google Calendar, Outlook, and most popular CRMs. Beaver Bot proposals can be sent directly via SMS or email. If you use a specific tool, ask us \u2014 we likely support it or can build a custom integration.",
   },
 ];
 
@@ -54,9 +54,9 @@ function FAQItem({
     >
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="flex w-full items-center justify-between py-5 text-left"
+        className="flex w-full items-center justify-between py-6 text-left"
       >
-        <span className="pr-4 text-base font-semibold text-charcoal-900">
+        <span className="pr-4 text-lg font-semibold text-charcoal-900">
           {question}
         </span>
         <ChevronDown
@@ -75,7 +75,7 @@ function FAQItem({
             transition={{ duration: 0.2 }}
             className="overflow-hidden"
           >
-            <p className="pb-5 text-sm leading-6 text-charcoal-600">
+            <p className="pb-6 text-lg leading-7 text-charcoal-600">
               {answer}
             </p>
           </motion.div>
@@ -87,16 +87,22 @@ function FAQItem({
 
 export default function FAQ() {
   return (
-    <section id="faq" className="bg-white py-20 sm:py-28">
+    <section id="faq" className="bg-charcoal-50 py-20 sm:py-28">
       <div className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center">
+        <motion.div
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+        >
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">
             FAQ
           </span>
-          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-charcoal-900 sm:text-4xl">
+          <h2 className="mt-2 text-[2rem] font-extrabold tracking-tight text-charcoal-900 sm:text-4xl">
             Common Questions
           </h2>
-        </div>
+        </motion.div>
 
         <div className="mt-12">
           {faqs.map((faq, i) => (

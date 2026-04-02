@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
-import Image from "next/image";
+import HeroCanvas from "./HeroCanvas";
 
 const bullets = [
   "Answers missed calls instantly",
@@ -12,8 +12,8 @@ const bullets = [
 
 export default function Hero() {
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-green-50 to-white pt-24 pb-16 sm:pt-32 sm:pb-24">
-      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#16a34a08_1px,transparent_1px),linear-gradient(to_bottom,#16a34a08_1px,transparent_1px)] bg-[size:4rem_4rem]" />
+    <section className="relative overflow-hidden bg-gradient-to-b from-green-50 via-green-50/50 to-white pt-24 pb-16 sm:pt-32 sm:pb-24">
+      <div className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,#16a34a06_1px,transparent_1px),linear-gradient(to_bottom,#16a34a06_1px,transparent_1px)] bg-[size:4rem_4rem]" />
 
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid items-center gap-12 lg:grid-cols-2 lg:gap-16">
@@ -59,7 +59,7 @@ export default function Hero() {
               {bullets.map((b) => (
                 <li
                   key={b}
-                  className="flex items-center gap-2.5 text-base font-medium text-charcoal-700"
+                  className="flex items-center gap-2.5 text-lg font-medium text-charcoal-700"
                 >
                   <CheckCircle className="h-5 w-5 shrink-0 text-green-500" />
                   {b}
@@ -88,26 +88,34 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Visual */}
+          {/* Interactive canvas */}
           <motion.div
-            className="flex justify-center lg:justify-end"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
+            className="hidden lg:block"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
           >
-            <div className="relative w-full max-w-md overflow-hidden rounded-2xl bg-charcoal-900 p-8 shadow-2xl shadow-charcoal-900/20">
-              <Image
-                src="/logo-full.png"
-                alt="Tree Service AI"
-                width={400}
-                height={400}
-                className="h-auto w-full"
-                priority
-              />
+            <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-green-200/60 bg-gradient-to-br from-green-50 to-white shadow-xl shadow-green-500/5">
+              <HeroCanvas />
+              {/* Center logo overlay */}
+              <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+                <div className="rounded-2xl bg-white/80 px-8 py-6 text-center backdrop-blur-sm">
+                  <p className="text-2xl font-extrabold tracking-tight text-charcoal-900">
+                    Tree Service{" "}
+                    <span className="text-primary">AI</span>
+                  </p>
+                  <p className="mt-1 text-sm font-medium text-charcoal-500">
+                    Intelligent Lead Management
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
       </div>
+
+      {/* Bottom gradient transition */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

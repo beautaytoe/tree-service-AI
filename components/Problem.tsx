@@ -24,7 +24,10 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="bg-section-dark py-20 sm:py-28">
+    <section className="relative bg-section-dark py-20 sm:py-28">
+      {/* Top gradient transition from light to dark */}
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white to-transparent" style={{ top: "-1px" }} />
+
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center"
@@ -43,14 +46,16 @@ export default function Problem() {
           {problems.map((p, i) => (
             <motion.div
               key={p.text}
-              className="flex items-start gap-4 rounded-xl border border-charcoal-700 bg-charcoal-800/60 px-6 py-5"
+              className="relative flex items-start gap-4 overflow-hidden rounded-xl border border-red-500/20 bg-red-950/20 px-6 py-5"
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: i * 0.08 }}
             >
-              <p.icon className="mt-0.5 h-6 w-6 shrink-0 text-red-400" />
-              <p className="text-lg font-medium text-charcoal-200">
+              {/* Subtle red glow */}
+              <div className="pointer-events-none absolute -left-4 -top-4 h-20 w-20 rounded-full bg-red-500/10 blur-2xl" />
+              <p.icon className="relative mt-0.5 h-6 w-6 shrink-0 text-red-400" />
+              <p className="relative text-lg font-medium text-charcoal-200">
                 {p.text}
               </p>
             </motion.div>
@@ -76,6 +81,9 @@ export default function Problem() {
           </a>
         </motion.div>
       </div>
+
+      {/* Bottom gradient transition from dark to light */}
+      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-white" style={{ bottom: "-1px" }} />
     </section>
   );
 }

@@ -1,8 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Menu, X } from "lucide-react";
-import Image from "next/image";
+import { Menu, X, TreePine } from "lucide-react";
 import clsx from "clsx";
 
 const links = [
@@ -17,15 +16,11 @@ export default function Navbar() {
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-charcoal-200/60 bg-white/90 backdrop-blur-md">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
-        <a href="#" className="flex items-center">
-          <Image
-            src="/logo-text.png"
-            alt="Tree Service AI"
-            width={180}
-            height={40}
-            className="h-8 w-auto sm:h-9"
-            priority
-          />
+        <a href="#" className="flex items-center gap-2">
+          <TreePine className="h-7 w-7 text-primary" />
+          <span className="text-lg font-extrabold tracking-tight text-charcoal-900 sm:text-xl">
+            Tree Service <span className="text-primary">AI</span>
+          </span>
         </a>
 
         <div className="hidden items-center gap-8 md:flex">
@@ -40,7 +35,7 @@ export default function Navbar() {
           ))}
           <a
             href="#contact"
-            className="rounded-lg bg-primary px-5 py-2.5 text-sm font-bold text-white shadow-sm transition-colors hover:bg-primary-dark"
+            className="rounded-lg bg-accent px-5 py-2.5 text-sm font-bold text-charcoal-900 shadow-sm transition-colors hover:bg-accent-dark"
           >
             Book a Demo
           </a>
@@ -75,7 +70,7 @@ export default function Navbar() {
           <a
             href="#contact"
             onClick={() => setOpen(false)}
-            className="mt-2 block rounded-lg bg-primary px-3 py-3.5 text-center text-base font-bold text-white hover:bg-primary-dark"
+            className="mt-2 block rounded-lg bg-accent px-3 py-3.5 text-center text-base font-bold text-charcoal-900 hover:bg-accent-dark"
           >
             Book a Demo
           </a>

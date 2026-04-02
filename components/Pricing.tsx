@@ -61,7 +61,7 @@ const tiers = [
 
 export default function Pricing() {
   return (
-    <section id="pricing" className="bg-charcoal-50 py-20 sm:py-28">
+    <section id="pricing" className="relative bg-charcoal-50 py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="mx-auto max-w-2xl text-center"
@@ -98,7 +98,7 @@ export default function Pricing() {
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
               {tier.popular && (
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-5 py-1.5 text-xs font-bold uppercase tracking-wider text-white shadow-md">
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 rounded-full bg-primary px-6 py-1.5 text-sm font-bold uppercase tracking-wider text-white shadow-lg shadow-green-600/20">
                   Most Popular
                 </span>
               )}
@@ -107,7 +107,7 @@ export default function Pricing() {
                 <h3 className="text-xl font-bold text-charcoal-900">
                   {tier.name}
                 </h3>
-                <p className="mt-1 text-sm text-charcoal-500">
+                <p className="mt-1 text-base text-charcoal-500">
                   {tier.description}
                 </p>
               </div>
@@ -127,7 +127,7 @@ export default function Pricing() {
                 {tier.features.map((feature) => (
                   <li
                     key={feature}
-                    className="flex items-start gap-2.5 text-[0.938rem] text-charcoal-700"
+                    className="flex items-start gap-2.5 text-base text-charcoal-700"
                   >
                     <Check className="mt-0.5 h-5 w-5 shrink-0 text-green-500" />
                     {feature}

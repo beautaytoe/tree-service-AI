@@ -42,7 +42,7 @@ export default function HowItWorks() {
           </h2>
         </motion.div>
 
-        <div className="mt-14 space-y-8 sm:space-y-0">
+        <div className="mt-14 space-y-0">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
@@ -50,24 +50,24 @@ export default function HowItWorks() {
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: i * 0.1 }}
+              transition={{ duration: 0.4, delay: i * 0.12 }}
             >
-              {/* Number + line */}
+              {/* Number + connecting line */}
               <div className="flex flex-col items-center">
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-full bg-primary text-xl font-extrabold text-white">
+                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary text-2xl font-extrabold text-white shadow-lg shadow-green-600/20 sm:h-20 sm:w-20 sm:text-3xl">
                   {step.number}
                 </div>
                 {i < steps.length - 1 && (
-                  <div className="mt-2 h-full w-0.5 bg-green-200" />
+                  <div className="my-1 h-full w-0.5 bg-gradient-to-b from-green-400 to-green-200" />
                 )}
               </div>
 
               {/* Content */}
-              <div className="pb-10">
-                <h3 className="text-xl font-bold text-charcoal-900">
+              <div className="pb-12 pt-2 sm:pb-14 sm:pt-3">
+                <h3 className="text-xl font-bold text-charcoal-900 sm:text-2xl">
                   {step.title}
                 </h3>
-                <p className="mt-2 text-base leading-7 text-charcoal-600">
+                <p className="mt-2 text-lg leading-7 text-charcoal-600">
                   {step.description}
                 </p>
               </div>
