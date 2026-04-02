@@ -45,7 +45,7 @@ export default function Footer() {
             &copy; {new Date().getFullYear()} Tree Service AI. All rights
             reserved. Powered by{" "}
             <a
-              href="https://rizedigital.com"
+              href="https://rizedigital.io"
               target="_blank"
               rel="noopener noreferrer"
               className="text-charcoal-500 transition-colors hover:text-primary"
