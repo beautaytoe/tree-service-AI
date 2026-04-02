@@ -5,10 +5,7 @@ import { Phone } from "lucide-react";
 
 export default function LeadCapture() {
   return (
-    <section className="relative bg-green-700 py-16 sm:py-20">
-      {/* Top gradient */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-16 bg-gradient-to-b from-white to-transparent" style={{ top: "-1px" }} />
-
+    <section className="bg-green-700 py-16 sm:py-20">
       <div className="mx-auto max-w-3xl px-4 text-center sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -50,9 +47,6 @@ export default function LeadCapture() {
           </p>
         </motion.div>
       </div>
-
-      {/* Bottom gradient */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-gradient-to-b from-transparent to-white" style={{ bottom: "-1px" }} />
     </section>
   );
 }

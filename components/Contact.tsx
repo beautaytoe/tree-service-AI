@@ -5,10 +5,7 @@ import { Send } from "lucide-react";
 
 export default function Contact() {
   return (
-    <section id="contact" className="relative bg-section-dark py-20 sm:py-28">
-      {/* Top gradient transition */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white to-transparent" style={{ top: "-1px" }} />
-
+    <section id="contact" className="bg-section-dark py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center"
@@ -38,12 +35,14 @@ export default function Contact() {
             viewport={{ once: true, margin: "-60px" }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <iframe
-              src="https://calendly.com/beau-rizedigital/30min?hide_gdpr_banner=1&background_color=1e293b&text_color=e2e8f0&primary_color=22c55e"
-              className="h-[600px] w-full rounded-2xl"
-              frameBorder="0"
-              title="Book a Demo"
-            />
+            <div className="overflow-hidden rounded-2xl border border-charcoal-700">
+              <iframe
+                src="https://calendly.com/beau-rizedigital/30min?hide_gdpr_banner=1&background_color=1e293b&text_color=e2e8f0&primary_color=22c55e"
+                className="h-[600px] w-full"
+                frameBorder="0"
+                title="Book a Demo"
+              />
+            </div>
           </motion.div>
 
           {/* Fallback form */}

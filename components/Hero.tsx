@@ -113,9 +113,6 @@ export default function Hero() {
           </motion.div>
         </div>
       </div>
-
-      {/* Bottom gradient transition */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-white" />
     </section>
   );
 }

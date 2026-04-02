@@ -24,10 +24,7 @@ const problems = [
 
 export default function Problem() {
   return (
-    <section className="relative bg-section-dark py-20 sm:py-28">
-      {/* Top gradient transition from light to dark */}
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-20 bg-gradient-to-b from-white to-transparent" style={{ top: "-1px" }} />
-
+    <section className="bg-section-dark py-20 sm:py-28">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center"
@@ -81,9 +78,6 @@ export default function Problem() {
           </a>
         </motion.div>
       </div>
-
-      {/* Bottom gradient transition from dark to light */}
-      <div className="pointer-events-none absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-white" style={{ bottom: "-1px" }} />
     </section>
   );
 }
