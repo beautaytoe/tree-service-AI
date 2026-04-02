@@ -6,27 +6,27 @@ import { MessageSquareText, Phone, FileText, CalendarCheck } from "lucide-react"
 const features = [
   {
     icon: MessageSquareText,
-    title: "SMS Automation",
+    title: "Instant Missed-Call Texting",
     description:
-      "Instant two-way texting with leads. Auto-respond to inquiries, send quotes, and follow up — all without lifting a finger.",
+      "Every missed call gets an instant text back. \u201cHey, saw you called \u2014 how can we help?\u201d Leads stay warm instead of calling the next guy.",
   },
   {
     icon: Phone,
-    title: "Voice AI",
+    title: "AI Receptionist (24/7)",
     description:
-      "AI-powered phone agent answers calls 24/7. Qualifies leads, answers common questions, and books estimates — powered by RetellAI.",
+      "Your AI receptionist never takes a day off. It answers calls, qualifies leads, handles pricing questions, and books estimates \u2014 even at 2 AM.",
   },
   {
     icon: FileText,
-    title: "Beaver Bot Proposals",
+    title: "60-Second Estimates",
     description:
-      "Generate professional proposals in seconds. AI drafts accurate bids based on job details so you can close faster.",
+      "Send estimates from your truck in 60 seconds. Beaver Bot builds professional proposals on the spot so you close jobs before you leave the property.",
   },
   {
     icon: CalendarCheck,
-    title: "Calendar Integration",
+    title: "Auto-Booking Calendar",
     description:
-      "Sync with your calendar to auto-schedule estimates and jobs. No double-bookings, no phone tag — just a full schedule.",
+      "Customers book themselves \u2014 no phone tag. Your calendar fills up automatically with qualified estimates. You just show up.",
   },
 ];
 
@@ -43,18 +43,20 @@ export default function Features() {
   return (
     <section id="features" className="bg-white py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="mx-auto max-w-2xl text-center">
+        <motion.div
+          className="mx-auto max-w-2xl text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-60px" }}
+          transition={{ duration: 0.5 }}
+        >
           <span className="text-sm font-semibold uppercase tracking-wider text-primary">
-            Features
+            What You Get
           </span>
-          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-charcoal-900 sm:text-4xl">
-            Everything You Need to Grow
+          <h2 className="mt-2 text-[2rem] font-extrabold tracking-tight text-charcoal-900 sm:text-4xl">
+            Tools That Work as Hard as You Do
           </h2>
-          <p className="mt-4 text-lg text-charcoal-600">
-            Purpose-built AI tools that handle your leads, calls, proposals, and
-            scheduling while you focus on the work.
-          </p>
-        </div>
+        </motion.div>
 
         <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           {features.map((feature, i) => (
@@ -73,7 +75,7 @@ export default function Features() {
               <h3 className="text-lg font-bold text-charcoal-900">
                 {feature.title}
               </h3>
-              <p className="mt-2 text-sm leading-6 text-charcoal-600">
+              <p className="mt-2 text-[0.938rem] leading-6 text-charcoal-600">
                 {feature.description}
               </p>
             </motion.div>

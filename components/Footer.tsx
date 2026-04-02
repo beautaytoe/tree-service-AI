@@ -1,8 +1,10 @@
+import Image from "next/image";
+
 const links = [
-  { label: "Features", href: "#features" },
+  { label: "How It Works", href: "#how-it-works" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  { label: "Book a Demo", href: "#contact" },
 ];
 
 export default function Footer() {
@@ -11,13 +13,16 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center gap-6 sm:flex-row sm:justify-between">
           <div>
-            <a
-              href="#"
-              className="text-lg font-extrabold tracking-tight text-charcoal-900"
-            >
-              <span className="text-primary">🌲</span> Tree Service AI
+            <a href="#" className="flex items-center">
+              <Image
+                src="/logo-text.png"
+                alt="Tree Service AI"
+                width={160}
+                height={36}
+                className="h-7 w-auto"
+              />
             </a>
-            <p className="mt-1 text-sm text-charcoal-500">
+            <p className="mt-2 text-sm text-charcoal-500">
               AI-powered lead management for tree service contractors.
             </p>
           </div>

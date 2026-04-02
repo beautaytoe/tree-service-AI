@@ -1,7 +1,11 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Problem from "@/components/Problem";
+import Demo from "@/components/Demo";
+import HowItWorks from "@/components/HowItWorks";
+import ROI from "@/components/ROI";
+import LeadCapture from "@/components/LeadCapture";
 import Features from "@/components/Features";
-import Benefits from "@/components/Benefits";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import FAQ from "@/components/FAQ";
@@ -13,8 +17,12 @@ export default function Home() {
     <>
       <Navbar />
       <Hero />
+      <Problem />
+      <Demo />
+      <HowItWorks />
+      <ROI />
+      <LeadCapture />
       <Features />
-      <Benefits />
       <Pricing />
       <Testimonials />
       <FAQ />
