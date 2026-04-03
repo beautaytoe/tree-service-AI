@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 
 const steps = [
   {
@@ -26,7 +27,7 @@ const steps = [
 export default function HowItWorks() {
   return (
     <section id="how-it-works" className="bg-charcoal-50 py-20 sm:py-28">
-      <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
         <motion.div
           className="text-center"
           initial={{ opacity: 0, y: 20 }}
@@ -42,35 +43,37 @@ export default function HowItWorks() {
           </h2>
         </motion.div>
 
-        <div className="mt-14 space-y-0">
+        {/* Horizontal on desktop, vertical on mobile */}
+        <div className="mt-14 grid gap-10 md:grid-cols-3 md:gap-6">
           {steps.map((step, i) => (
             <motion.div
               key={step.number}
-              className="flex gap-6 sm:gap-8"
-              initial={{ opacity: 0, x: -20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              className="relative flex flex-col items-center text-center"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
               transition={{ duration: 0.4, delay: i * 0.12 }}
             >
-              {/* Number + connecting line */}
-              <div className="flex flex-col items-center">
-                <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-full bg-primary text-2xl font-extrabold text-white shadow-lg shadow-green-600/20 sm:h-20 sm:w-20 sm:text-3xl">
-                  {step.number}
+              {/* Dashed connector — desktop only */}
+              {i < steps.length - 1 && (
+                <div
+                  className="pointer-events-none absolute top-10 left-[calc(50%+2.5rem)] hidden items-center md:flex"
+                  style={{ width: "calc(100% - 5rem)" }}
+                >
+                  <div className="h-0.5 flex-1 border-t-2 border-dashed border-green-300" />
+                  <ArrowRight className="-ml-1 h-5 w-5 text-green-400" />
                 </div>
-                {i < steps.length - 1 && (
-                  <div className="my-1 h-full w-0.5 bg-gradient-to-b from-green-400 to-green-200" />
-                )}
-              </div>
+              )}
 
-              {/* Content */}
-              <div className="pb-12 pt-2 sm:pb-14 sm:pt-3">
-                <h3 className="text-xl font-bold text-charcoal-900 sm:text-2xl">
-                  {step.title}
-                </h3>
-                <p className="mt-2 text-lg leading-7 text-charcoal-600">
-                  {step.description}
-                </p>
+              <div className="flex h-20 w-20 items-center justify-center rounded-full bg-primary text-3xl font-extrabold text-white shadow-lg shadow-green-600/20">
+                {step.number}
               </div>
+              <h3 className="mt-5 text-xl font-bold text-charcoal-900">
+                {step.title}
+              </h3>
+              <p className="mt-2 text-base leading-7 text-charcoal-600">
+                {step.description}
+              </p>
             </motion.div>
           ))}
         </div>

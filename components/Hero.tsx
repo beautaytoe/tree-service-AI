@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
-import Image from "next/image";
+import { CheckCircle, AlertTriangle } from "lucide-react";
 import HeroCanvas from "./HeroCanvas";
+import PhoneMockup from "./PhoneMockup";
 
 const bullets = [
   "Answers missed calls instantly",
@@ -69,7 +69,17 @@ export default function Hero() {
             </motion.ul>
 
             <motion.div
-              className="mt-8 flex flex-col gap-3 sm:flex-row"
+              className="mt-4 flex items-center gap-2 text-sm font-bold text-red-500"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.5, delay: 0.35 }}
+            >
+              <AlertTriangle className="h-4 w-4 shrink-0" />
+              Tree companies miss 40–60% of inbound calls.
+            </motion.div>
+
+            <motion.div
+              className="mt-6 flex flex-col gap-3 sm:flex-row"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
@@ -89,22 +99,14 @@ export default function Hero() {
             </motion.div>
           </div>
 
-          {/* Mobile visual */}
+          {/* Phone mockup — mobile + tablet */}
           <motion.div
             className="flex justify-center lg:hidden"
-            initial={{ opacity: 0, scale: 0.95 }}
-            animate={{ opacity: 1, scale: 1 }}
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.5 }}
           >
-            <div className="overflow-hidden rounded-2xl bg-charcoal-900 p-6">
-              <Image
-                src="/logo-full.png"
-                alt="Tree Service AI"
-                width={200}
-                height={200}
-                className="h-auto w-[200px]"
-              />
-            </div>
+            <PhoneMockup />
           </motion.div>
 
           {/* Interactive canvas — desktop */}
@@ -116,7 +118,6 @@ export default function Hero() {
           >
             <div className="relative aspect-square w-full overflow-hidden rounded-3xl border border-green-200/60 bg-gradient-to-br from-green-50 to-white shadow-xl shadow-green-500/5">
               <HeroCanvas />
-              {/* Center logo overlay */}
               <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
                 <div className="rounded-2xl bg-white/80 px-8 py-6 text-center backdrop-blur-sm">
                   <p className="text-2xl font-extrabold tracking-tight text-charcoal-900">

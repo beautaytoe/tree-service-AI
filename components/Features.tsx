@@ -66,7 +66,7 @@ export default function Features() {
           {features.map((feature, i) => (
             <motion.div
               key={feature.title}
-              className="group rounded-2xl border border-charcoal-200 bg-white p-6 transition-shadow hover:shadow-lg hover:shadow-green-500/5"
+              className="group rounded-2xl border border-charcoal-200 border-t-2 border-t-green-500 bg-white p-6 transition-all hover:bg-green-50 hover:shadow-lg hover:shadow-green-500/5"
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"

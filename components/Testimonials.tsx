@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 
 const testimonials = [
   {
@@ -59,6 +59,7 @@ export default function Testimonials() {
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.1 }}
             >
+              <Quote className="mb-2 h-10 w-10 text-green-200" />
               <div className="mb-4 flex gap-1">
                 {Array.from({ length: 5 }).map((_, j) => (
                   <Star

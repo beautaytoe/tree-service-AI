@@ -31,6 +31,11 @@ const faqs = [
     answer:
       "We integrate with Google Calendar, Outlook, and most popular CRMs. Beaver Bot proposals can be sent directly via SMS or email. If you use a specific tool, ask us \u2014 we likely support it or can build a custom integration.",
   },
+  {
+    question: "How much does it cost?",
+    answer:
+      "Plans start at $497/month for solo operators. Our Growth plan at $1,497/month includes voice AI and unlimited SMS. All plans include a 30-day money-back guarantee \u2014 no long-term contracts.",
+  },
 ];
 
 function FAQItem({

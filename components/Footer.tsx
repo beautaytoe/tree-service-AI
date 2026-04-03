@@ -1,10 +1,15 @@
-import { TreePine } from "lucide-react";
+import { TreePine, Mail } from "lucide-react";
 
-const links = [
+const navLinks = [
   { label: "How It Works", href: "#how-it-works" },
   { label: "Pricing", href: "#pricing" },
   { label: "FAQ", href: "#faq" },
   { label: "Book a Demo", href: "#contact" },
+];
+
+const legalLinks = [
+  { label: "Privacy Policy", href: "#" },
+  { label: "Terms of Service", href: "#" },
 ];
 
 export default function Footer() {
@@ -22,12 +27,19 @@ export default function Footer() {
             <p className="mt-2 text-base text-charcoal-500">
               AI-powered lead management for tree service contractors.
             </p>
+            <a
+              href="mailto:hello@treeserviceai.com"
+              className="mt-2 flex items-center gap-1.5 text-sm text-charcoal-500 transition-colors hover:text-primary"
+            >
+              <Mail className="h-3.5 w-3.5" />
+              hello@treeserviceai.com
+            </a>
           </div>
 
           <nav className="flex flex-wrap items-center justify-center gap-6">
-            {links.map((link) => (
+            {navLinks.map((link) => (
               <a
-                key={link.href}
+                key={link.href + link.label}
                 href={link.href}
                 className="text-sm text-charcoal-500 transition-colors hover:text-charcoal-900"
               >
@@ -37,7 +49,7 @@ export default function Footer() {
           </nav>
         </div>
 
-        <div className="mt-8 border-t border-charcoal-200 pt-6 text-center">
+        <div className="mt-8 flex flex-col items-center gap-4 border-t border-charcoal-200 pt-6 sm:flex-row sm:justify-between">
           <p className="text-sm text-charcoal-400">
             &copy; {new Date().getFullYear()} Tree Service AI. All rights
             reserved. Powered by{" "}
@@ -51,6 +63,17 @@ export default function Footer() {
             </a>
             .
           </p>
+          <div className="flex items-center gap-4">
+            {legalLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className="text-sm text-charcoal-400 transition-colors hover:text-charcoal-600"
+              >
+                {link.label}
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </footer>
